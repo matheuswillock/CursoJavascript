@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript | Switch</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+
+    <h1>Switch</h1>
+
+    <h2>O que é o comando Switch?</h2>
+
+    <p>
+        O comando Switch é uma condicional que visa com base em uma determinada condição seguir um determinado fluxo dentro da aplicação. (Parecido com if/else).
+    </p>
+
+    <h2>Diferenças entre o Swicth e o if/else.</h2>
+
+    <p>
+        O comando Switch é bem parecido com o if/else, mas ele nos auxiliano enetendimento
+    </p>
+
+    <hr>
+
+    <h2>Sintaxe</h2>
+
+    <p>
+        switch (parâmetro) { <br> <br>
+        
+            case 1: <br>
+                // Se o parâmetro === 1 <br> 
+            break <br> <br>
+    
+            case 2: <br>
+                // Se o parâmetro === 2 <br>
+            break <br> <br>
+    
+            default: <br> 
+                // Se o parâmetro não encontrado <br>
+        }
+    </p>
+
+    <hr>    
+
+    <script>
+
+        var parametro = parseInt(prompt())
+            // Estou utilizando o parseInt() para fazer com que as strings sejam lidas como numbers.
+
+        switch (parametro) {
+
+            case 1:
+                document.write('<h1>Parâmetro 1</h1')
+            break
+
+            case 2:
+                document.write('<h1>Parâmetro 2</h1>')
+            break
+
+            default:
+                document.write('<h1>Default</h1>')
+            break
+
+        }
+
+    </script>
+    
+</body>
+</html>

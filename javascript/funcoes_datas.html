@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | Funções nativas - Datas</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+
+    <script>
+        // variaveis comos métodos manipulando as datas.
+        var data = new Date()
+
+        var month = (data.getMonth() +1)
+
+        var date = data.getDate()
+
+        var year = data.getFullYear() 
+
+        var day = data.getDay()
+    </script>
+
+    <h1>Funções nativas: Manipulação de datas</h1>
+    
+    <p>Para manipularmos as utilizamos o objeto 'date'</p>
+
+    <p>
+        Principais métodos do objeto date:
+
+        <ul>
+            <li>Mês => getMonth() -> return 0-1.</li>
+            <li>Ano => getFullYear() </li>
+            <li>Data => getDate() </li>
+            <li>Dia da Semana => getDay() -> return 0-1.</li>
+        </ul>
+
+       toddas as informações de datas elas são criadas com base na data do sistema operacional onde o broswer está rodando. Ou seja, o JS solicita as informações de datas ao broswer, o broswer solicita ao sistema operacional onde o usuário esteja rodando. Se por ventura o usuário alterar as informações do sistema também seráalterado na nossa aplicação.
+        <br><br>
+        Os métodos só podem ser utilizados a partir da instância do objeto. <u>Isso significa que, devemos declarar uma 'var' com a instância</u>.
+        <br><br>
+        var data = new Date()
+        <br><br>
+        A partir desta var podemos utilizar o métodos. O new Date faz com que um novo objeto de data seja criado e atribuido a uma variável.
+    </p>
+
+    <h2>Exemplo de manipulação com data curta</h2>
+
+    <script>
+        if (month <= 9) {
+            var zero = '0' 
+        } else { 
+            var zero = 0 
+        } 
+
+        // Data Curta
+        document.write(date + '/' + (zero + month) + '/' + year)
+    </script>
+
+    <h2>Exemplo de manipulação com data longa</h2>
+
+    <script>
+       
+        if (day == 0) {
+            var day = 'Domingo, '
+        } else if (day == 1 ) {
+            var day = 'Segunda-feira, '
+        } else if (day == 2 ) {
+            var day = 'Terça-feira, '
+        } else if (day == 3 ) {
+            var day = 'Quarta-feira, '
+        } else if (day == 4 ) {
+            var day = 'Quinta-feira, '
+        } else if (day == 5 ) {
+            var day = 'Sexta-feira, '
+        } else {
+            var day = 'Sabádo, '
+        } 
+        
+        if (month == 1 ) {
+            var month = ' de Janeiro de '
+        } else if (month == 2 ) {
+            var month = ' de Fevereiro de  '
+        } else if (month == 3 ) {
+            var month = ' de Março de '
+        } else if (month == 4 ) {
+            var month = ' de Abril de '
+        } else if (month == 5 ) {
+            var month = ' de Maio de '
+        } else if (month == 6) {
+            var month = ' de Junho de'
+        } else if (month == 7 ) {
+            var month = ' de Julho de '
+        } else if (month == 8 ) {
+            var month = ' de Agosto de '
+        } else if (month == 9 ) {
+            var month = ' de Setembro de '
+        } else if (month == 10) {
+            var month = ' de Outubro de '
+        } else if (month == 11) {
+            var month = ' de Novembro de '
+        } else {
+            var month = ' de Dezembro de '
+        }
+
+        // Data longa
+        document.write(day + date + month + year)
+
+    </script>
+
+</body>
+</html>
