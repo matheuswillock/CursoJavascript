@@ -1,0 +1,15 @@
+* {
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+body {
+    background-color: rgba(102, 102, 102, 0.459);
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: orangered;
+}

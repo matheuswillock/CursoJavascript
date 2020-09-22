@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript | Switch</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+    <h1>Operadores Aritiméticos</h1>
+
+    <p>São operações matemáticosque nos permite realizar operações básicas no Javascript</p>
+
+    <h2>Operadores</h2>
+
+    <p>
+        Adição (+) <br>
+        Subtração (-) <br>
+        Multiplicação (*) <br>
+        Divisão (/) <br>
+        Módulo (%) <br>
+        Incremento (++) <br>
+        Decremento (--) <br>
+    </p>
+
+    <script>
+
+        var num1 = parseInt(prompt('Digite um valor para o calculo'))
+        var num2 = parseInt(prompt('Digite um valor para o calculo'))
+        var teste = parseInt(prompt('Digite um valor para o teste'))
+        var teste1 = parseInt(prompt('Digite um valor para o teste'))        
+
+        document.write('<hr><br>' + 'A soma entre '+ num1 +' e ' + num2 + ' é:' + (num1 + num2) +  '<br><br><hr>')
+
+        document.write('<hr><br>' + 'A subtração entre '+ num1 +' e ' + num2 + ' é:' + (num1 - num2) + '<br><br><hr>')
+
+        document.write('<hr><br>' + 'A multiplicação entre '+ num1 +' e ' + num2 + ' é:' + (num1 * num2) + '<br><br><hr>')
+
+        document.write('<hr><br>' + 'A Divisão entre '+ num1 +' e ' + num2 + ' é:' + (num1 / num2) + '<br><br><hr>')
+
+        document.write('<hr><br>' + 'O módulo entre '+ num1 +' e ' + num2 + ' é:' + (num1 % num2) + '<br><br><hr>')
+
+        document.write('<hr><br>' + 'O Incremento do '+ num1 + ' é:' + (++num1) + '<br><br><hr>')
+
+        document.write('<hr><br>' + 'O Decremento do '+ num2 + ' é:' + (--num2) + '<br><br><hr>')
+
+        document.write('<hr><br>' + 'Para evitar que os nossoos códigos fiquem muito verbosos podemos realizar uma lógica simples conforme abaixo' + '<br><br><hr>')
+
+        document.write('<hr><br>' + 'A variável teste é igual a: ' + teste + '<br>' + 'A variável teste1 é igual a: ' + teste1 + '<br>' + 'Quero fazer uma operação aritimética com o valor de teste. Então, ao invés de dizer o seguinte; teste + teste1 = x ou teste - teste1 = x. Podemos fazer conforme abaixo.' + '<br><br><hr>')
+
+        document.write('<hr><br>' + 'teste += seu número: '+ (teste += teste1) + '<br><br><hr>')
+
+        // document.write('<hr><br>' + 'teste -= seu número: '+ (teste -= teste1) + '<br><br><hr>')
+
+        // document.write('<hr><br>' + 'teste *= seu número: '+ (teste *= teste1) + '<br><br><hr>')
+
+        // document.write('<hr><br>' + 'teste /= seu número: '+ (teste /= teste1) + '<br><br><hr>')
+
+        // document.write('<hr><br>' + 'teste %= seu número: '+ (teste %= teste1) + '<br><br><hr>')
+
+    </script>
+
+       
+</body>
+</html>

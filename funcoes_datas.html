@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | Funções nativas - Datas</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+
+    <script>
+        // variaveis comos métodos manipulando as datas.
+        var data = new Date()
+
+        var month = (data.getMonth() +1)
+
+        var date = data.getDate()
+
+        var year = data.getFullYear() 
+
+        var day = data.getDay()
+    </script>
+
+    <h1>Funções nativas: Manipulação de datas</h1>
+    
+    <p>Para manipularmos as utilizamos o objeto 'date'</p>
+
+    <p>
+        Principais métodos do objeto date:
+
+        <ul>
+            <li>Mês => getMonth() -> return 0-1.</li>
+            <li>Ano => getFullYear() </li>
+            <li>Data => getDate() </li>
+            <li>Dia da Semana => getDay() -> return 0-1.</li>
+        </ul>
+
+       toddas as informações de datas elas são criadas com base na data do sistema operacional onde o broswer está rodando. Ou seja, o JS solicita as informações de datas ao broswer, o broswer solicita ao sistema operacional onde o usuário esteja rodando. Se por ventura o usuário alterar as informações do sistema também seráalterado na nossa aplicação.
+        <br><br>
+        Os métodos só podem ser utilizados a partir da instância do objeto. <u>Isso significa que, devemos declarar uma 'var' com a instância</u>.
+        <br><br>
+        var data = new Date()
+        <br><br>
+        A partir desta var podemos utilizar o métodos. O new Date faz com que um novo objeto de data seja criado e atribuido a uma variável.
+    </p>
+
+    <h2>Exemplo de manipulação com data curta</h2>
+
+    <script>
+        if (month <= 9) {
+            var zero = '0' 
+        } else { 
+            var zero = 0 
+        } 
+
+        // Data Curta
+        document.write(date + '/' + (zero + month) + '/' + year)
+    </script>
+
+    <h2>Exemplo de manipulação com data longa</h2>
+
+    <script>
+       
+        if (day == 0) {
+            var day = 'Domingo, '
+        } else if (day == 1 ) {
+            var day = 'Segunda-feira, '
+        } else if (day == 2 ) {
+            var day = 'Terça-feira, '
+        } else if (day == 3 ) {
+            var day = 'Quarta-feira, '
+        } else if (day == 4 ) {
+            var day = 'Quinta-feira, '
+        } else if (day == 5 ) {
+            var day = 'Sexta-feira, '
+        } else {
+            var day = 'Sabádo, '
+        } 
+        
+        if (month == 1 ) {
+            var month = ' de Janeiro de '
+        } else if (month == 2 ) {
+            var month = ' de Fevereiro de  '
+        } else if (month == 3 ) {
+            var month = ' de Março de '
+        } else if (month == 4 ) {
+            var month = ' de Abril de '
+        } else if (month == 5 ) {
+            var month = ' de Maio de '
+        } else if (month == 6) {
+            var month = ' de Junho de'
+        } else if (month == 7 ) {
+            var month = ' de Julho de '
+        } else if (month == 8 ) {
+            var month = ' de Agosto de '
+        } else if (month == 9 ) {
+            var month = ' de Setembro de '
+        } else if (month == 10) {
+            var month = ' de Outubro de '
+        } else if (month == 11) {
+            var month = ' de Novembro de '
+        } else {
+            var month = ' de Dezembro de '
+        }
+
+        // Data longa
+        document.write(day + date + month + year)
+
+    </script>
+
+    <h2>Como adicionar ou remover dias da nossa data</h2>
+
+    <script>
+
+        document.write(data.toString()) 
+        // Método toString tilizado na instância data para podermos escrever por extenso a data e hora local.
+
+    </script>
+
+    <br>
+    <hr>
+
+    <h3>Adcionando dias</h3>
+
+    <script>
+        // vamos utilizar o método set para add os dias
+        data.setDate(date + 1) // add 1 dia a data
+
+        document.write(data.toString())
+    </script>
+
+    <h3>Removendo dias</h3>
+
+    <script>
+        data.setDate(date - 1)
+
+        document.write(data.toString())
+    </script>
+
+    <br>
+    <hr>
+
+    <h3>Adcionando meses</h3>
+
+    <script>
+        var month = data.getMonth() // necessario update na var 
+        
+        data.setMonth(month + 1) 
+
+        document.write(data.toString())
+    </script>
+
+    <h3>Removendo meses</h3>
+
+    <script>
+        data.setMonth(month - 1)
+
+        document.write(data.toString())
+    </script>
+
+    <br>
+    <hr>
+
+    <h3>Adcionando anos</h3>
+
+    <script>
+                
+        data.setFullYear(year + 1) 
+
+        document.write(data.toString())
+    </script>
+
+    <h3>Removendo anos</h3>
+
+    <script>
+        data.setFullYear(year - 1)
+
+        document.write(data.toString())
+    </script>
+
+    <br>
+    <hr>
+
+    <h2>Otra maneira de realizarmos processo matemático com datas:</h2>
+
+    <p>
+        Como descobrir a diferença de dias entre as datas abaixo?
+        <ul>
+            <li>
+                <script>
+                    // 22/09/2020
+                    var date1 = new Date(2020, 8, 22)
+                    document.write(date1.toString())
+                </script>
+            </li>
+            <li>
+                <script>
+                    // 07/11/2020
+                    var date2 = new Date(2020, 10, 7)
+                    document.write(date2.toString())
+                </script>
+            </li>
+        </ul>
+
+        Como não conseguimos trabalhar sobre uma representação textual precisamos, vamos precisar converter as nossas datas para algo que possamos calcular.
+        <ul>
+            <li>
+                Então vamos Utilizar o método getTime para recuperar os milissegundos das datas. 
+                <br>
+                Os millisegundos serão recuperados a partir de 1 de Janeiro de 1970 até a respectiva data.
+
+                <ul>
+                    <li>
+                        <script>
+                            document.write('Data 1 = ' + date1.getTime())
+                        </script>
+                    </li>
+                    <li>
+                        <script>
+                            document.write('Data 2 = ' + date2.getTime())
+                        </script>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Encontrar a diferença de milissegundos entre as datas para depois convertermos a diferença em dias.
+                <ul>
+                    <li>
+                        <script>
+                            // vamos subtrair date1 e date2
+                            document.write(date1.getTime() - date2.getTime())    
+                        </script>
+                        <br>
+                        Para convertermos o número em absoluto vamos utilizar o método <u>Math.abs()</u>.
+                        <li>
+                            <script>
+                                // vamos subtrair date1 e date2
+                                var milissegundos_entre_datas = Math.abs(date1.getTime() - date2.getTime())
+                                document.write(milissegundos_entre_datas)    
+                            </script>
+                        </li>                        
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Converter a quantidade de milissegundos por dias.
+                <ul>
+                    <li>
+                        <script>
+                            // 1 dia tem 24rhs. 
+                            // Cada minuto tem 60 segundos.
+                            // Cada segundo tem 1000 milissegundos.
+                            // Quantos milissegundos tem 1 dia?
+                            var milissegundos_por_dia = (1*24*60*60*1000)
+                            document.write('1 dia tem: ' + milissegundos_por_dia + ' milissegundos.') 
+                        </script>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Convertidos osmilissegundos pr dia, quantos dias faltam entre a data 1 e data 2?
+                <ul>
+                    <li>
+                        <script>
+                            document.write('Faltam ' + Math.round(milissegundos_entre_datas / milissegundos_por_dia) + 'dia(s).')
+                            // vamos utilizar o método Math.round para arredondar a quantidade de dias.
+                        </script>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </p>    
+
+</body>
+</html>

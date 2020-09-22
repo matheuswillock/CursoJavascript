@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript | Funções Anônimas</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+    <h1>
+        Funções Anônimas
+        <br>
+        E a técnica de wrapper
+    </h1>
+
+    <h2> E a técnica de wrapper </h2>
+
+    <script>
+
+        // Criando uma função anônima;
+        /*
+        function () {
+            document.write('Olá ' + '???' + ', tudo bem?')
+        }
+        */        
+        
+        // Utilizando a técnica de Wrapper;
+        var exibirSaudacao = function(nome) {
+            document.write('Olá ' + nome + ', tudo bem?')
+        }
+
+        // Uma variável para receber a entrada do nome;
+        var user = prompt('Seu nome:')
+
+        // Chamando a function anônima;
+        exibirSaudacao(user)
+
+        
+
+    </script>
+</body>
+</html>

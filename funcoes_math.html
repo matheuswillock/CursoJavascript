@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | Funções nativas Matemáticas</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+
+    <h1>Funções nativas para tarefas Matemáticas</h1>
+
+    <p>
+        Podemos acessá-las através do objeto <b>'Math'</b> do Javascript.
+    </p>
+
+    <script>
+
+        var x = 10.380
+        // como arredondar este número para cima?
+        // Método ceil
+        // var x = Math.ceil(10.380)
+        // console.log(x) => 11
+
+        // vamos arredondar esse número para baixo
+        // Método floor
+        // document.write(Math.floor(x))
+
+        // Como podemos arredondar para cima ou para baixo levando em consideração o peso da fração? Se for >= 0.5 para cima, se for <= 0.4 para baixo.
+        // método round
+        var x2 = 10.580 
+        document.write(Math.round(x))
+        document.write('<br>')
+        document.write(Math.round(x2))      
+
+
+
+    </script>
+    
+</body>
+</html>
