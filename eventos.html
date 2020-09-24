@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | Eventos</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body onresize="frame1()" onscroll="frame2()">
+    
+    <h1>Eventos - Introdução</h1>
+
+    <h2>O que são?</h2>
+
+    <p>
+        Os eventos nos permitem capturar ações relizadas pelo usuário dentro do broswer. Desde um determinado movimento no mouse sobre algum elemento da página, um click do teclado,processos de loading, redimensionamento da tela e ações dentro de formulários. <br>
+        Todos esses eventos e muitos outros podem ser combinados com funções e a patir disso podemos disparar a realização de uma lógica, combinada a uma interação do usuário com a página e até mesmo sobre a manipulação do broswer.
+    </p>
+
+    <h2>
+        Eventos capturados a partir do Mouse:
+    </h2>
+
+    <script>
+        // Eventos criados
+        function acao1() {
+            // Lógica a ser realizada.
+            alert('Evento disparado: O elemento foi clickado!')
+        }
+
+        function acao2() {
+            alert('Evento disparado: O elemento foi clickado 2 vezes!')
+        }
+
+        function acao3() {
+            alert('Evento disparado: Click liberado!')
+        }
+
+        function acao4(){
+            alert('Evento disparado: O mouse está sobre o elemento!')
+        }
+
+        function acao5() {
+            alert('Evento disparado: O mouse deixou o elemento!')
+        }
+
+    </script>
+
+    <ul>
+        <li>onclick</li>
+        <p>Quando o elemento é clickado.</p>
+
+        <div onclick="acao1()" style="background: #ccc; height: 100px; width: 150px;">
+
+            <p style="text-align: center;">
+                Click aqui!
+            </p>
+
+        </div>
+
+        <li>ondblclick</li>
+        <p>Quando o elemento é clickado duas vezes.</p>
+
+        <div ondblclick="acao2()" style="background: #ccc; height: 100px; width: 150px;">
+
+            <p style="text-align: center;">
+                Click aqui!
+            </p>
+
+        </div>
+
+        <li>onmouseup</li>
+        <p>Quando o click sobre determinado elemento é liberado.</p>
+
+        <div onmouseup="acao3()" style="background: #ccc; height: 100px; width: 150px;">
+
+            <p style="text-align: center;">
+                Click aqui!
+            </p>
+
+        </div>
+
+        <li>onmouseover</li>
+        <p>Acionado quando o cursor do moouse sobrepõe a região do elemento dentro do broswer </p>
+
+        <div onmouseover="acao4()" style="background: #ccc; height: 100px; width: 150px;">
+
+            <p style="text-align: center;">
+                Click aqui!
+            </p>
+
+        </div>
+
+        <li>onmouseout</li>
+        <p>Quando o cursor sai sobre o elemento da página.</p>
+
+        <div onmouseout="acao5()" style="background: #ccc; height: 100px; width: 150px;">
+
+            <p style="text-align: center;">
+                Click aqui!
+            </p>
+
+        </div>
+
+    </ul>
+
+    <h2>
+        Eventos capturados a partir do Teclado:
+    </h2>
+
+    <script>
+
+        function key1() {
+            alert('Evento disparado: Uma tecla qualquer foi pressionada.')
+        }
+
+        function key2() {
+            alert('Evento disparado: Um caracter foi inserido.')
+        }
+
+        function key3() {
+            alert('Evento disparado: Uma tecla foi despressionada.')
+        }
+
+    </script>
+
+    <ul>
+        <li>onkeydown</li>
+        <p>Acionado no momento emque qualquer tecla é pressionada.</p>
+
+        <input type="text" onkeydown="key1()">
+
+        <li>onkeypress</li>
+        <p>Acionado em que a tecla é liberada. Só funciona com teclas que representam uma saída de um caractere, ou seja, não funciona com o 'ctrl', por exemplo.</p>
+
+        <input type="text" onkeypress="key2()">
+
+        <li>onkeyup</li>
+        <p>Acionado no momento em que a tecla é pressionada.</p>
+
+        <input type="text" onkeyup="key3()">
+    </ul>
+
+    <h2>Eventos disparados a partir do Frame</h2>
+
+    <script>
+        function frame1() {
+            alert('Evento disparado: Página redimensionada')
+        }
+
+        function frame2() {
+            console.log('Evento disparado: Página scrollada')
+        }
+
+    </script>
+
+    <ul>
+        <li>onresize</li>
+        <p>
+            Acionado quando a página é redimensionada. <br>
+            <span style="color: red;">OBS:</span> Para utiizarmos esse evento precisamos aplicar no elemento html que sofre redimensionamento de tela, logo entendemos que é o elemento body. <br>
+            Vamos aplicar o evento ao elemento do body e redimensionar a tela para que o evento seja disparado.
+        </p>
+
+        <li>onscroll</li>
+        <p>
+            Acionado quando o scroll é realizado na página.
+            <span>OBS:</span> para verificar a ação deste evento, utilize o devtools - console.
+        </p>
+
+    </ul>
+
+    <h2>Eventos capturados a partir de Formulários:</h2>
+
+    <p style="font-size: 20px; color: green;">
+        Todos os eventos serão recuperados pelo console, para evitar que ocorra loops.
+    </p>
+
+    <script>
+
+        function form1() {
+            console.log('Evento disparado: Input focado!')
+        }
+
+        function form2() {
+            console.log('Evento disparado: Input sem foco!')
+        }
+
+        function form3() {
+            console.log('Evento disparado: Select modificado!')
+        }
+
+    </script>
+
+    <ul>
+        <li>onfocus</li>
+        <p>Acionado quando o elemento recebe o focu do mouse. </p>
+
+        <input onfocus="form1()" type="text">
+
+        <li>onblur</li>
+        <p>Acioando quando o elemento perde o focu</p>
+
+        <input onblur="form2()" type="text">
+
+        <li>onchange</li>
+        <p>Acionado quando o estado é modificado. Muito comum com elementos do type select.</p>
+
+        <select onchange="form3()">
+           <option>--Selecione--</option>
+           <option value="">Pirata</option>
+           <option value="">Ninja</option>
+           <option value="">Mago</option>
+        </select>
+
+    </ul>
+   
+
+</body>
+</html>
