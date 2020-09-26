@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | DOM: Desafio</title>
+</head>
+<body>
+
+    <h1>Desafio DOM</h1>
+
+    <ol>
+        <li>
+            Crieum campo 'input type = text' e aplique os seguintes controles com base nos
+            eventos abaixo:
+        </li>
+    </ol>
+
+    <ul>
+        <li>
+            No evento de foco modifique o background do input para amarelo.
+        </li>
+
+        <li>
+            Quando o campo perder o foco, recupere o seu respectivo valor e:
+
+            <ul>   
+
+                <li>
+                    Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo
+                    deve ter seu background alterado para vermelho.
+                </li>
+
+                <li>
+                    Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
+                    deve ser alterado para verde.
+                </li>
+
+            </ul>
+
+        </li>
+        
+    </ul>
+
+    <hr>
+
+    <input id="campo" type="text" onfocus="focu()" onblur="valid()">
+
+    <script>
+        
+        function focu() {
+            document.getElementById('campo').style.background = "yellow"
+        }
+
+        function valid() {
+            var valorCampo = document.getElementById('campo').value
+
+            if (valorCampo.length < 3) {
+                document.getElementById('campo').style.background = "red"
+            } else {
+                document.getElementById('campo').style.background = "green"
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

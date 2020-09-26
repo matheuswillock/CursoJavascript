@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+
+    <h1>
+        Dom - Introdução <br>
+        <span style="font-size: 20px; color: rgba(0, 0, 0, 0.383);">Document Object Model</span>
+    </h1>
+
+    <h2>O que é?</h2>
+    
+    <p>
+        API que nos permite acessar via <span style="color: yellow;">Javascript</span> os elementos html da página. <br>
+        É através do <span style="color: red;">DOM</span> que vamos acessar e modificar os elementos HTML. Cada elemento contido no DOM é chamado de node.
+    </p>
+
+    <h2>Selecionando elementos da página</h2>
+
+    <h3>Principais métodos de acesso através da API do DOM:</h3>
+
+    <p>
+        A partir do Object document utilizando a API do DOM, podemos utilizar os métodos abaixos para acessar os elementos HTML para acessar os elementos. <br> <br>
+
+        document (API DOM)
+
+        <ul>
+            <li>getElementById()</li>
+            <li>getElementsByTagName</li>
+            <li>getElementsByClassName</li>
+            <li>getElementsByName</li>
+        </ul>
+    </p>
+
+    <input 
+        type="text"
+        placeholder="Digite seu nome"
+        id="nome_usuario"
+        class="campo_texto"
+        name="nome"
+    >
+
+    <script>
+        // console.log(document.getElementById('nome_usuario'))
+        // console.log(document.getElementsByTagName('input'))
+        // console.log(document.getElementsByClassName('campo_texto'))
+        // console.log(document.getElementsByName('nome'))
+    </script>
+
+    <h2>Manipulando valores de inputs (texto)</h2>
+
+    <p>
+        <span style="font-weight: bolder; color: red;">Objetivo:</span> selecionar os elementos do tipo text a apartir  do objeto 'document' utilizando alguns dos métodos disponiveis na API e posteriormente afetar os valores.
+    </p>
+
+    <h3>Desafio:</h3>
+
+    <ul>
+        <li>
+            Criar tres campos:
+
+            <ol>
+                <li>
+                    Entrada de caracteres.
+                </li>
+                <li>
+                    Entrada de letras somente.
+                </li>
+                <li>
+                    Entrada de números somente.
+                </li>
+            </ol>
+        </li>        
+    </ul>
+
+    <p>
+        O primeiro campo servirá para entrada de caracteres e então, com base no caracterer digitado no campo, vamos disparar uma lógica a partir de evento. Se o caracter for uma <u style="font-weight: bolder;">letra</u>, vamos acrescentar o caracter ao input do tipo <u style="font-weight: bolder;">text</u>. Caso contrário se o caracter digitado for um <u style="font-weight: bolder;">número</u>, vamos acrescentar o caracter ao input text do tipo <u style="font-weight: bolder;">number</u>. <br>
+        A partir de um evento, vamos disparar uma ação e dentro desta ação, vamos precisar selecionar os elementos a partir da API do DOM para aplicar a lógica necessária.
+    </p>
+
+    <div>
+        <!--
+            Verifica o caracter digitado,se a letra vai para o campo "Letras", se número vai para o campo "Números".
+        -->
+        <input
+          type="text" 
+          placeholder="Digite um caracter aqui" 
+          onkeyup="distribuiCaracter()" 
+          id="entrada"
+        >
+
+        <hr>
+
+        <Span>Letras: </Span>
+
+        <input type="text" disabled id="letras">
+
+        <span>Números: </span>
+
+        <input type="text" disabled id="numeros">
+    </div>
+  
+
+    <script>
+
+        function distribuiCaracter() {
+            
+            // Selecionar o valor digitado.
+           var caracter = document.getElementById('entrada').value;
+
+           // Limpar o campo de digitação a cada nova inclusão de caracter.
+           document.getElementById('entrada').value = '';
+
+           //Limpar os espaços entre as extremidades das strings.
+           caracter.trim()
+            
+            switch(caracter) {
+               case  '0' :
+               case '1':
+               case '2':
+               case '3':
+               case '4':
+               case '5':
+               case '6':
+               case '7':
+               case '8':
+               case '9':
+                   parseFloat(caracter) 
+                   // Ocorreu um bug: Quando se digitava Números rapidamente, o switch os mandava todos para o input letras. Para evitar isso resolvi criar um switch seguido de um if/else.
+                break           
+            }           
+
+            if (caracter >= 0) {
+                // Adcionar o caracter no campo referente a números.
+                document.getElementById('numeros').value += caracter
+            } else {
+                document.getElementById('letras').value += caracter
+                    // Adcionar o caracter referente a letras. Também vamos concatenarpara que o resultado anterior não seja sobreposto pelo anterior.
+            }
+           
+        }
+        
+    </script>
+
+    <h2>Manipulando estilos com DOM</h2>
+
+    <p>
+        Essa éuma tecnica muito utilizada para fazermos com que a página reaja visualmente as ações do usuário.
+        <br><br>
+        <span style="font-weight: bolder; color: red;">Exemplos:</span>
+        <ul>
+            <li>Exibir ou fechar uma tabela atraés de um botão.</li>
+            <li>Expandir ou retrair um menu.</li>
+        </ul>
+        A partir damanipulação visual dos elementos podemos fornecer para o usuário informações muito ricas e dar mais dinâmica as nossas aplicações.
+    </p>
+
+    <h3>Objetivo</h3>
+
+    <p>
+        Vamos criar uma página com três botões e ao clicar no botão nós vamos afetar o background de uma div.
+    </p>
+    
+    <h3>Manipulando Estilos</h3>   
+
+    <button type="button" onclick="modificarEstilo('#ff0000', '200px', '50px')">Vermelho</button>
+    <button type="button" onclick="modificarEstilo('#00FF00', '50px', '200px')">Verde</button>
+    <button type="button" onclick="modificarEstilo('#0000FF', '350px', '300px')">Azul</button>
+    <button type="button" onclick="modificarEstilo('white', '100px', '100px')">Default</button>
+    
+    <hr>
+
+    <div id="quadrado" style="border: solid 1px #000; width: 100px; height: 100px; margin-top: 10px;"></div>  
+
+    <script>
+
+        function modificarEstilo(corDeFundo, width, height) {
+            //selecionar o elemento e manipular o style.
+            document.getElementById('quadrado').style.backgroundColor = corDeFundo
+            document.getElementById('quadrado').style.width = width     
+            document.getElementById('quadrado').style.height = height                 
+        }
+
+    </script>   
+
+    <style>
+
+        .estilo1 {
+            background-color: rgb(251, 255, 0);
+            color: whitesmoke;
+        }
+
+        .estilo2 {
+            background-color: #0000FF;
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            color: white;
+            padding: 25px;
+        }
+
+    </style>
+
+    <h2>Manipulando classes de elementos</h2>
+
+    <p>
+        Ao selecionar um elemento através do método 'ClassName' vamos aplicar uma classe ao elemento. <br>
+        <span style="color: red; font-weight: bolder;">Obs: </span>o atributo 'getElementById' mofigica o stilo de forma inline, enquanto o atributo 'getElementsByClassName' atribui uma class ao elemento.
+    </p>
+
+    <h3>Modificando a classe</h3>
+
+    <div id="mensagem" class="estilo1" style="border: solid 1px #000; width: 200px; height: 100px; margin-bottom: 10px;">
+        Modificando a classe do elemento.
+    </div> 
+
+    <button type="button" onclick="modificaClass()">Aplicar a classe</button>
+
+    <button type="button" onclick="original()">Default</button>
+
+    <script>
+
+        function modificaClass() {
+            document.getElementById('mensagem').className = 'estilo2'
+        }
+
+        function original() {
+            document.getElementById('mensagem').className = 'estilo1'
+        }
+
+
+    </script>
+
+        
+</body>
+</html>
