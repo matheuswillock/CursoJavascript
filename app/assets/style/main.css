@@ -1,0 +1,99 @@
+* {
+    font-family: 'Baloo Tammudu 2', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #363636;
+    color: #eeeeee;
+
+}
+
+.container {
+    margin: 80px 20rem;
+    padding: 20px;
+}
+
+.calculadora{
+    margin: 15px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    background-color: #a7a6a6;
+    margin: 30px auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.content-calc {
+   margin-top: 15px;
+   margin-bottom: 20px;
+}
+
+.content-calc input {
+    border-radius: 12px;
+    background-color: #eeeeee;
+    text-align: right;
+    font-size: 26px;
+    border: solid 1px #000;
+    box-shadow: 1px 3px 1px #000;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    padding-right: 10px;
+    width: 232px;
+    margin-left: 8px;
+}
+
+.group-numbers {
+    display: flex;
+    columns: row;
+    justify-content: center;   
+   
+}
+
+#point {
+    margin-top: -60px;
+    padding-left: 1px;
+    
+}
+
+.btn {
+    width: 60px;
+    height: 50px;
+    margin: 5px;   
+    border-radius: 20%;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.btn:hover {
+    background-color:#c8c1d0 ;
+    box-shadow: 1px 1px 3px #000;
+    transition-delay: 0.5ms;
+}
+
+#clear {
+    width: 130px;
+    border-radius: 10px;
+}
+  
+#enter {
+    height: 110px;
+    border-radius: 10px;
+}
+
+#zero {
+    width: 129px;
+    border-radius: 10px;
+}
+
+#dot {
+    margin-left: 1px;
+}
