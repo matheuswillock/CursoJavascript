@@ -3,14 +3,16 @@
 }
 
 body {
-    background-color: rgba(102, 102, 102, 0.459);
+    background-color: #444444;
+    color: #eeeeee;
 }
 
 h1 {
     text-align: center;
-    color: blue;
+   
+    color: #2069e0;
 }
 
 h2 {
-    color: orangered;
+    color: #f4d47c;
 }

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | Array Multidimensional</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+    
+
+<h1>Array Multidimensional</h1>
+
+<h2>O que são?</h2>
+
+<p>
+    Arrays Multidimensional ou Bidimensional são, Arrays com arrays encadeadas dentro delas. <br>
+    Podemos utilizar essa estrutura para emissão de relatórios que, retornam os dados do banco de dados e agrupam todos os dados em uma única Array.
+</p>
+
+<hr>
+
+<script>
+    var lista_coisas = Array()
+
+    lista_coisas['frutas'] = Array('Banana', 'Maçã', 'Morango', 'Uva')
+    lista_coisas['Pessoas'] = Array('Pedro', 'Tiago', 'João')
+
+    document.write(lista_coisas['frutas'])
+    document.write('<br>')
+    document.write(lista_coisas['Pessoas'])
+   
+    console.log(lista_coisas)
+
+</script>
+
+<h2>Métodos de inclusão e exclusão de elementos</h2>
+
+<script>
+
+    var lista_frutas = Array('Banana', 'Maçã')
+
+</script>
+
+<p>
+
+    <span style="color: red;">var</span> lista_frutas = <span style="color: cornflowerblue;">Array</span>('Banana', 'Maçã') <br> <br>
+
+    lista de frutas:
+    <ol>
+        <li>Banana</li>
+        <li>Maçã</li>
+    </ol>
+    <hr>
+    <br>
+
+    <ul>
+        <li>
+            Para icluirmos um elemento ao final da nossa Array, passamos o método nativo <u>push</u>. <br>
+
+            <script>
+
+               lista_frutas.push('Uva')
+
+               document.write(lista_frutas.toString())
+
+            </script>
+           
+        </li>
+        <br>
+
+        <li>
+            Incluir um elemento na primeira posição da Array, <u>unshift</u>. <br>
+
+            <script>
+
+                lista_frutas.unshift('Morango')
+
+                document.write(lista_frutas.toString())
+
+            </script>
+            
+        </li>
+        <br>
+
+        <li>
+            Excluindo um elemento ao final do Array independete do indíce e do nome do elemento; <u>pop</u>. <br>
+
+            <script>
+
+                lista_frutas.pop()
+
+                document.write(lista_frutas.toString())
+
+            </script>
+            
+        </li>
+        <br>
+
+        <li>
+            Excluindo o primeiro elemento da Array; <u>shift</u>. <br>
+
+            <script>
+
+                lista_frutas.shift()
+
+                document.write(lista_frutas.toString())
+
+            </script>
+            
+        </li>
+        <br>
+
+        <li>
+            Incluido um elemento ao final da Array multidimensional. <br>
+
+            <script>
+
+                lista_coisas['Pessoas'].push('Jesus')
+
+                document.write(lista_coisas['Pessoas'].toString())
+
+            </script>
+        </li>
+        <br>
+
+        <li>
+            Incluindo ao inicio da Array Bidimensional. <br>
+
+            <script>
+
+                lista_coisas['Pessoas'].unshift('Judas')
+
+
+                document.write(lista_coisas['Pessoas'].toString())
+
+            </script>
+        </li>
+        <br>
+
+        <li>
+            Removendo elemento do final da Array Bidimensional.<br>
+
+            <script>
+
+                lista_coisas['Pessoas'].pop()
+
+                document.write(lista_coisas['Pessoas'].toString())
+                
+            </script>
+        </li>
+        <br>
+
+        <li>
+            Removendo elemento do inicio da Array Bidimensional.
+
+            <br>
+            <script>
+
+                lista_coisas['Pessoas'].shift()
+
+                document.write(lista_coisas['Pessoas'].toString())
+
+            </script>
+        </li>
+
+    </ul>
+</p>
+
+
+</body>
+</html>

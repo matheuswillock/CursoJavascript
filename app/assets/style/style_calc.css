@@ -7,7 +7,6 @@
 body {
   background-color: #363636;
   color: #eeeeee;
-
 }
 
 .container {
@@ -15,25 +14,25 @@ body {
   padding: 20px;
 }
 
-.calculadora{
-  margin: 15px;
-}
-
 .content {
   display: flex;
   justify-content: center;
   background-color: #a7a6a6;
   margin: 30px auto;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-bottom: 30px;
 }
 
 .content-calc {
  margin-top: 15px;
- margin-bottom: 20px;
+ margin-bottom: 25px;
 }
 
-.content-calc input {
+.calculadora{
+  margin: 20px;  
+}
+
+.calculadora  input {
   border-radius: 12px;
   background-color: #eeeeee;
   text-align: right;
@@ -54,11 +53,6 @@ body {
   justify-content: center; 
 }
 
-#point {
-  margin-top: -60px;
-  padding-left: 1px;  
-}
-
 .btn {
   width: 60px;
   height: 50px;
@@ -74,7 +68,6 @@ body {
 .btn:hover {
   background-color:#c8c1d0 ;
   box-shadow: 1px 1px 3px #000;
-  transition-delay: 0.5ms;
 }
 
 #clear {
@@ -87,8 +80,13 @@ body {
   border-radius: 10px;
 }
 
+#point {
+  margin-top: -60px;
+  padding-left: 5px;  
+}
+
 #zero {
-  width: 129px;
+  width: 130px;
   border-radius: 10px;
 }
 

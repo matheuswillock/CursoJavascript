@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | Método de pesquisa</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+
+    <h1>Método de pesquisa em Array</h1>
+
+    <p>
+        Pesquisamos elementos dentro de uma Array utilizando o método nativo <span style="color: red">.indexOf()</span>. 
+        <br>
+        Seo elemento pesquisado não for contido na Array, retorna a posição do index da Array -1, e se, for positivo retorna a posição do indíce da Array onde o elemento está contido.
+        <ul>
+            <li>listaFilmes[0]'...'</li>
+            <li>listaFilmes[1]'...'</li>
+            <li>listaFilmes[2]'...'</li>
+            <li>listaFilmes[3]'...'</li>
+        </ul>  
+
+    </p>
+
+    <hr>
+
+    <h2>
+        O exemplo abaixo vai explicar;
+    </h2>
+
+    <p>
+        var listaAnimes = Array('Naruto', 'One Piece', 'Sword art online', 'My Hero Academia', 'Black Clover')
+        <br>
+        <br>
+        var anime = listaAnimes.indexOf('Naruto') 
+        <br>
+        <br>
+        if (anime === -1) { <br>
+            document.write('Não assistido') <br>
+        } else { <br>
+            document.write('Assistido e está na posição ' + anime) <br>
+        }
+    </p>
+    
+
+    <script>
+
+        var listaAnimes = Array('Naruto', 'One Piece', 'Sword art online', 'My Hero Academia', 'Black Clover')
+
+        var anime = listaAnimes.indexOf('Naruto') 
+
+        if (anime === -1) {
+            document.write('Não assistido')
+        } else {
+            document.write('Assistido e está na posição ' + anime)
+        }
+
+    </script>
+    
+</body>
+</html>

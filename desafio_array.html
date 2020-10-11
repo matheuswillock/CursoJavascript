@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | Desafio Array</title>
+</head>
+<body>
+
+    <input  type="text" placeholder="Digite um objeto" id="entrada"> 
+    <button type="button" onclick="funcao1()" >Adcionar</button>
+    <button type="button" onclick="" >Ordenar</button>
+    
+
+    <script>
+
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+        var leitura = document.getElementById('entrada').value
+
+        
+       function funcao1() {
+
+        if (leitura === '') {
+        alert('Informe um valor válido')
+        } else if ( leitura != '') {
+            objetos.indexOf(leitura)
+         
+        } 
+
+       }
+
+        
+
+       console.log(leitura)
+    </script>
+</body>
+</html>

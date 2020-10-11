@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruso Javascript | Array - básico</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+
+
+</head>
+<body>
+    
+    <h1>Array - básico</h1>
+
+    <h2>O que é</h2>
+
+    <p>
+        São listas ordenadas. São variáveis que nos permitem relacionar itens associados a indíces, esses indíces são chaves.
+        <br>
+        Esse tipo de variáel tenta imitar as listas do mundo real.
+    </p>
+
+    <h3>Listas de frutas</h3>
+
+    <ol>
+        <li>Banana</li>
+        <li>Maçã</li>
+        <li>Morango</li>
+        <li>Uva</li>
+    </ol>
+
+    <h4><u>Com variáveis:</u></h4>
+
+    <ul>
+        <li><span style="color: red" >var</span> fruta_1 = 'Banana' </li>
+        <li><span style="color: red" >var</span> fruta_2 = 'Maçã' </li>
+        <li><span style="color: red" >var</span> fruta_3 = 'Morango' </li>
+        <li><span style="color: red" >var</span> fruta_4 = 'Uva' </li>
+    </ul>
+
+    <h4><u>Com um único Array:</u></h4>
+
+    <p>
+        <span style="color: red;">var</span> lista_frutas = <span style="color: royalblue;">Array</span>();
+        <ul>
+            <li>lista_fruta[1] = 'Banana'</li>
+            <li>lista_fruta[2] = 'Maçã'</li>
+            <li>lista_fruta[3] = 'Morango'</li>
+            <li>lista_fruta[4] = 'Uva'</li>
+        </ul>
+
+    </p>
+
+    <p>
+        Uma Array serve para armazenar qualquer item fde forma relacional.
+        <br>
+        Por exemplo; uma lista funcionários, lista de compras, lista de nomes de alunos e etc. Tudo o que puder ser relacionável é possível ser incluido em arrays. <br>
+        Assim, temos a vantagem de recuperar os resultados chamando o nome de uma única variável e indicando a posição do elemento.
+    </p>
+
+    <p>
+        Para criarmos uma Array, precisamos informar que uma variável recebe um objeto do tio array.
+        <br>
+        <br> 
+
+        <div style="font-size: 24px;">
+          <span style="color: red;">var</span> lista_frutas = <span style="color: royalblue;">Array</span>();
+        </div>
+
+        <br>
+        <br>
+        Depois, podemos adcionaros itense indicar os indíces de cada elemento.
+
+        <div style="font-size: 20px;">            
+            <ul>
+                <li>lista_fruta[1] = 'Banana'</li>
+                <li>lista_fruta[2] = 'Maçã'</li>
+                <li>lista_fruta[3] = 'Morango'</li>
+                <li>lista_fruta[4] = 'Uva'</li>
+            </ul>
+        </div>
+
+    </p>
+
+    <script>
+        // Prática
+
+        // var lista_frutas = Array(); ou 
+        // var lista_frutas = []
+
+        // lista_frutas[0] = 'Banana'
+        // lista_frutas[1] = 'Maçã'
+        // lista_frutas[2] = 'Morango'
+        // lista_frutas[3] = 'Uva'
+
+        // Ou odemos segur de uma forma short hand;
+        // var lista_frutas = Array('Banana', 'Maçã', 'Morango', 'Uva')
+
+        var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva']
+
+        //o Próprio JS vai atribuir os indíces aos elementos partindo do número 0.
+
+        console.log(lista_frutas)
+
+
+    </script>
+    
+
+
+</body>
+</html>

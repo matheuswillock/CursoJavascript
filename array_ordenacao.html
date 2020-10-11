@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript | Ordenação de Array</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+<body>
+
+    <script>
+
+        var konoha = Array('Hokage', 'Ambu', 'Jounin', 'Chunnin', 'Genin')
+
+        document.write('var konoha = ' + konoha.toString() + '. <br> Está variável será reordenada abaixo com o método .sort(): <br><br>')
+        document.write(konoha.sort() + '<br><br>')
+        
+        var list_numbers = Array(12, 70, 0, 50, 100, 10, 20, 5)
+
+        document.write('var list_numbers = ' + list_numbers.sort() + '. <br> Os serão reordenados abaixo, mas é necessário utilizar uma função com a lógica nos retornando (a-b) para que possa serpossívelreordenar os números, pois se não o .sort() vai reordenar como se fossem alfanuméricos.<br><br>')
+
+        function ordenaNumeros(a, b) {
+            // < 0 = a ordena antes de b.
+            // > 0 = b ordena antes de a.
+            // == a ordem é mantida.
+            return a - b            
+        }
+
+        document.write(list_numbers.sort(ordenaNumeros))
+
+    </script>
+    
+</body>
+</html>
