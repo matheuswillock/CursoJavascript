@@ -4,35 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso Javascript | Desafio Array</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
 </head>
 <body>
 
-    <input  type="text" placeholder="Digite um objeto" id="entrada"> 
-    <button type="button" onclick="funcao1()" >Adcionar</button>
-    <button type="button" onclick="" >Ordenar</button>
-    
+    <input type="text" id="objeto">
+    <button onclick="add()" onmouseup="white()">Adicionar</button>
+    <button onclick="order()">Ordenar</button>
 
+
+    <div style="margin: 3rem auto;">
+
+        <div style="
+            border: 1px white;
+            background: red;           
+            height: 16rem;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        ">
+      
+            <p id="texto" style="
+                color: white; 
+                font-weight: 600; 
+                font-size: x-large; 
+                
+            ">
+            </p>  
+    
+        </div>  
+    </div>
+     
     <script>
 
-        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
-
-        var leitura = document.getElementById('entrada').value
-
+        var objetos =  Array('cadeira', 'impressora', 'garfo')
         
-       function funcao1() {
+        function add() { 
 
-        if (leitura === '') {
-        alert('Informe um valor válido')
-        } else if ( leitura != '') {
-            objetos.indexOf(leitura)
-         
+            // Recuperar o valor inserido no campo input pelo id.
+            var objeto = document.getElementById('objeto').value;
+
+            // Caso possua algum valor preenchido entra no if
+            if (objeto !== '') {
+
+                //Verificar se o item já foi inserido anteriormente, se sim, informa que o valor já existe. 
+                // Se não insere o novo item.
+                if (objetos.indexOf(objeto) !== -1) {
+                    alert('Objeto já foi adicionado')
+                } else {                    
+                    objetos.push(objeto)          
+
+                    document.getElementById('texto').innerHTML = objetos; 
+                    
+                }
+            } else {  
+                alert('Informe um objeto válido')
+            }           
+
+            document.getElementById('objeto').value = ''
+        }
+
+        function order() {
+            objetos.sort()
+            document.getElementById('texto').innerHTML = objetos;          
         } 
 
-       }
+    </script> 
 
-        
 
-       console.log(leitura)
-    </script>
 </body>
 </html>
